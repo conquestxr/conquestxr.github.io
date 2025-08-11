@@ -18,6 +18,7 @@ function Core:setScreenGui(settings)
     setParentHandler(ScreenGui, "ZIndexBehavior", settings.ZIndex)
     setParentHandler(ScreenGui, "ResetOnSpawn", settings.ResetOnSpawn)
     setParentHandler(ScreenGui, "IgnoreGuiInset", settings.IgnoreGuiInset)
+    setParentHandler(ScreenGui, "Enabled", settings.Enabled)
     return ScreenGui
 end
 
@@ -33,6 +34,8 @@ function Core:setFrame(settings)
     setParentHandler(Frame, "Parent", settings.Parent)
     setParentHandler(Frame, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(Frame, "Visible", settings.Visible)
+    setParentHandler(Frame, "Active", settings.Active)
+    setParentHandler(Frame, "Selectable", settings.Selectable)
     return Frame
 end
 
@@ -54,6 +57,9 @@ function Core:setTextButton(settings)
     setParentHandler(TextButton, "FontSize", settings.FontSize)
     setParentHandler(TextButton, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(TextButton, "Visible", settings.Visible)
+    setParentHandler(TextButton, "AutoButtonColor", settings.AutoButtonColor)
+    setParentHandler(TextButton, "ZIndex", settings.ZIndex)
+    setParentHandler(TextButton, "Modal", settings.Modal)
     if settings.Callback then
         TextButton.MouseButton1Click:Connect(settings.Callback)
     end
@@ -78,6 +84,7 @@ function Core:setTextLabel(settings)
     setParentHandler(TextLabel, "FontSize", settings.FontSize)
     setParentHandler(TextLabel, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(TextLabel, "Visible", settings.Visible)
+    setParentHandler(TextLabel, "ZIndex", settings.ZIndex)
     return TextLabel
 end
 
@@ -86,6 +93,7 @@ function Core:setImageLabel(settings)
     setParentHandler(ImageLabel, "Name", settings.Name)
     setParentHandler(ImageLabel, "Image", settings.Image)
     setParentHandler(ImageLabel, "ImageTransparency", settings.ImageTransparency)
+    setParentHandler(ImageLabel, "ImageColor3", settings.ImageColor3)
     setParentHandler(ImageLabel, "BackgroundColor3", settings.BackgroundColor3)
     setParentHandler(ImageLabel, "BackgroundTransparency", settings.BackgroundTransparency)
     setParentHandler(ImageLabel, "Position", settings.Position)
@@ -94,6 +102,7 @@ function Core:setImageLabel(settings)
     setParentHandler(ImageLabel, "ScaleType", settings.ScaleType)
     setParentHandler(ImageLabel, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(ImageLabel, "Visible", settings.Visible)
+    setParentHandler(ImageLabel, "ZIndex", settings.ZIndex)
     return ImageLabel
 end
 
@@ -102,6 +111,7 @@ function Core:setImageButton(settings)
     setParentHandler(ImageButton, "Name", settings.Name)
     setParentHandler(ImageButton, "Image", settings.Image)
     setParentHandler(ImageButton, "ImageTransparency", settings.ImageTransparency)
+    setParentHandler(ImageButton, "ImageColor3", settings.ImageColor3)
     setParentHandler(ImageButton, "BackgroundColor3", settings.BackgroundColor3)
     setParentHandler(ImageButton, "BackgroundTransparency", settings.BackgroundTransparency)
     setParentHandler(ImageButton, "Position", settings.Position)
@@ -110,6 +120,8 @@ function Core:setImageButton(settings)
     setParentHandler(ImageButton, "ScaleType", settings.ScaleType)
     setParentHandler(ImageButton, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(ImageButton, "Visible", settings.Visible)
+    setParentHandler(ImageButton, "ZIndex", settings.ZIndex)
+    setParentHandler(ImageButton, "AutoButtonColor", settings.AutoButtonColor)
     if settings.Callback then
         ImageButton.MouseButton1Click:Connect(settings.Callback)
     end
@@ -132,6 +144,9 @@ function Core:setScrollingFrame(settings)
     setParentHandler(ScrollingFrame, "VerticalScrollBarPosition", settings.VerticalScrollBarPosition)
     setParentHandler(ScrollingFrame, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(ScrollingFrame, "Visible", settings.Visible)
+    setParentHandler(ScrollingFrame, "ZIndex", settings.ZIndex)
+    setParentHandler(ScrollingFrame, "Active", settings.Active)
+    setParentHandler(ScrollingFrame, "Selectable", settings.Selectable)
     return ScrollingFrame
 end
 
@@ -156,6 +171,7 @@ function Core:setTextBox(settings)
     setParentHandler(TextBox, "MultiLine", settings.MultiLine)
     setParentHandler(TextBox, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(TextBox, "Visible", settings.Visible)
+    setParentHandler(TextBox, "ZIndex", settings.ZIndex)
     return TextBox
 end
 
@@ -212,6 +228,3 @@ function Core:setGradient(settings)
 end
 
 return Core
-
-
-
