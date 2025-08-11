@@ -1,1 +1,160 @@
+-- || Phosphorus UI ||--
+-- This script is not intended to be modify,
+-- Only took inspiration or idea on it.
+-- Created by ConquestX
 
+local Core = {}
+
+local function setParentHandler(parent, propertyName, value)
+    if value then
+        parent[propertyName] = value
+    end
+end
+
+function Core:setScreenGui(settings)
+    local ScreenGui = Instance.new("ScreenGui")
+    setParentHandler(ScreenGui, "Name", settings.Name)
+    setParentHandler(ScreenGui, "Parent", settings.Parent)
+    setParentHandler(ScreenGui, "ZIndexBehavior", settings.ZIndex)
+    setParentHandler(ScreenGui, "ResetOnSpawn", settings.ResetOnSpawn)
+    setParentHandler(ScreenGui, "IgnoreGuiInset", settings.IgnoreGuiInset)
+end
+
+function Core:setFrame(settings)
+    local Frame = Instance.new("Frame")
+    setParentHandler(Frame, "Name", settings.Name)
+    setParentHandler(Frame, "BackgroundColor3", settings.BackgroundColor3)
+    setParentHandler(Frame, "BorderSizePixel", settings.BorderSizePixel)
+    setParentHandler(Frame, "ClipsDescendants", settings.ClipsDescendants)
+    setParentHandler(Frame, "Position", settings.Position)
+    setParentHandler(Frame, "Size", settings.Size)
+    setParentHandler(Frame, "Parent", settings.Parent)
+    setParentHandler(Frame, "AnchorPoint", settings.AnchorPoint)
+    setParentHandler(Frame, "Visible", settings.Visible)
+end
+
+function Core:setTextButton(settings)
+    local TextButton = Instance.new("TextButton")
+    setParentHandler(TextButton, "Name", settings.Name)
+    setParentHandler(TextButton, "Text", settings.Text)
+    setParentHandler(TextButton, "TextColor3", settings.TextColor3)
+    setParentHandler(TextButton, "BackgroundColor3", settings.BackgroundColor3)
+    setParentHandler(TextButton, "Position", settings.Position)
+    setParentHandler(TextButton, "Size", settings.Size)
+    setParentHandler(TextButton, "Parent", settings.Parent)
+    setParentHandler(TextButton, "Font", settings.Font)
+    setParentHandler(TextButton, "FontSize", settings.FontSize)
+    setParentHandler(TextButton, "AnchorPoint", settings.AnchorPoint)
+    setParentHandler(TextButton, "Visible", settings.Visible)
+    if settings.Callback then
+        TextButton.MouseButton1Click:Connect(settings.Callback)
+    end
+end
+
+function Core:setTextLabel(settings)
+    local TextLabel = Instance.new("TextLabel")
+    setParentHandler(TextLabel, "Name", settings.Name)
+    setParentHandler(TextLabel, "Text", settings.Text)
+    setParentHandler(TextLabel, "TextColor3", settings.TextColor3)
+    setParentHandler(TextLabel, "BackgroundTransparency", settings.BackgroundTransparency)
+    setParentHandler(TextLabel, "Position", settings.Position)
+    setParentHandler(TextLabel, "Size", settings.Size)
+    setParentHandler(TextLabel, "Parent", settings.Parent)
+    setParentHandler(TextLabel, "Font", settings.Font)
+    setParentHandler(TextLabel, "FontSize", settings.FontSize)
+    setParentHandler(TextLabel, "AnchorPoint", settings.AnchorPoint)
+    setParentHandler(TextLabel, "Visible", settings.Visible)
+end
+
+function Core:setImageLabel(settings)
+    local ImageLabel = Instance.new("ImageLabel")
+    setParentHandler(ImageLabel, "Name", settings.Name)
+    setParentHandler(ImageLabel, "Image", settings.Image)
+    setParentHandler(ImageLabel, "BackgroundTransparency", settings.BackgroundTransparency)
+    setParentHandler(ImageLabel, "Position", settings.Position)
+    setParentHandler(ImageLabel, "Size", settings.Size)
+    setParentHandler(ImageLabel, "Parent", settings.Parent)
+    setParentHandler(ImageLabel, "ScaleType", settings.ScaleType)
+    setParentHandler(ImageLabel, "AnchorPoint", settings.AnchorPoint)
+    setParentHandler(ImageLabel, "Visible", settings.Visible)
+end
+
+function Core:setImageButton(settings)
+    local ImageButton = Instance.new("ImageButton")
+    setParentHandler(ImageButton, "Name", settings.Name)
+    setParentHandler(ImageButton, "Image", settings.Image)
+    setParentHandler(ImageButton, "BackgroundTransparency", settings.BackgroundTransparency)
+    setParentHandler(ImageButton, "Position", settings.Position)
+    setParentHandler(ImageButton, "Size", settings.Size)
+    setParentHandler(ImageButton, "Parent", settings.Parent)
+    setParentHandler(ImageButton, "ScaleType", settings.ScaleType)
+    setParentHandler(ImageButton, "AnchorPoint", settings.AnchorPoint)
+    setParentHandler(ImageButton, "Visible", settings.Visible)
+    if settings.Callback then
+        ImageButton.MouseButton1Click:Connect(settings.Callback)
+    end
+end
+
+function Core:setScrollingFrame(settings)
+    local ScrollingFrame = Instance.new("ScrollingFrame")
+    setParentHandler(ScrollingFrame, "Name", settings.Name)
+    setParentHandler(ScrollingFrame, "BackgroundColor3", settings.BackgroundColor3)
+    setParentHandler(ScrollingFrame, "BackgroundTransparency", settings.BackgroundTransparency)
+    setParentHandler(ScrollingFrame, "Position", settings.Position)
+    setParentHandler(ScrollingFrame, "Size", settings.Size)
+    setParentHandler(ScrollingFrame, "Parent", settings.Parent)
+    setParentHandler(ScrollingFrame, "CanvasSize", settings.CanvasSize)
+    setParentHandler(ScrollingFrame, "ScrollBarThickness", settings.ScrollBarThickness)
+    setParentHandler(ScrollingFrame, "AnchorPoint", settings.AnchorPoint)
+    setParentHandler(ScrollingFrame, "Visible", settings.Visible)
+end
+
+function Core:setTextBox(settings)
+    local TextBox = Instance.new("TextBox")
+    setParentHandler(TextBox, "Name", settings.Name)
+    setParentHandler(TextBox, "Text", settings.Text)
+    setParentHandler(TextBox, "TextColor3", settings.TextColor3)
+    setParentHandler(TextBox, "BackgroundColor3", settings.BackgroundColor3)
+    setParentHandler(TextBox, "Position", settings.Position)
+    setParentHandler(TextBox, "Size", settings.Size)
+    setParentHandler(TextBox, "Parent", settings.Parent)
+    setParentHandler(TextBox, "Font", settings.Font)
+    setParentHandler(TextBox, "FontSize", settings.FontSize)
+    setParentHandler(TextBox, "PlaceholderText", settings.PlaceholderText)
+    setParentHandler(TextBox, "ClearTextOnFocus", settings.ClearTextOnFocus)
+    setParentHandler(TextBox, "AnchorPoint", settings.AnchorPoint)
+    setParentHandler(TextBox, "Visible", settings.Visible)
+end
+
+function Core:setCornerRadius(settings)
+    local Corner = Instance.new("UICorner")
+    setParentHandler(Corner, "CornerRadius", settings.CornerRadius)
+    setParentHandler(Corner, "Parent", settings.Parent)
+end
+
+function Core:setStroke(settings)
+    local Stroke = Instance.new("UIStroke")
+    setParentHandler(Stroke, "Color", settings.Color)
+    setParentHandler(Stroke, "Thickness", settings.Thickness)
+    setParentHandler(Stroke, "Parent", settings.Parent)
+end
+
+function Core:setGridLayout(settings)
+    local GridLayout = Instance.new("UIGridLayout")
+    setParentHandler(GridLayout, "CellPadding", settings.CellPadding)
+    setParentHandler(GridLayout, "CellSize", settings.CellSize)
+    setParentHandler(GridLayout, "Parent", settings.Parent)
+    setParentHandler(GridLayout, "FillDirectionMaxCells", settings.FillDirectionMaxCells)
+    setParentHandler(GridLayout, "StartCorner", settings.StartCorner)
+end
+
+function Core:setListLayout(settings)
+    local ListLayout = Instance.new("UIListLayout")
+    setParentHandler(ListLayout, "Parent", settings.Parent)
+    setParentHandler(ListLayout, "Padding", settings.Padding)
+    setParentHandler(ListLayout, "VerticalAlignment", settings.VerticalAlignment)
+    setParentHandler(ListLayout, "HorizontalAlignment", settings.HorizontalAlignment)
+    setParentHandler(ListLayout, "SortOrder", settings.SortOrder)
+end
+
+return Core
