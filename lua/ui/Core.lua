@@ -201,7 +201,7 @@ function Core:setListLayout(settings)
     return ListLayout
 end
 
-function Core:CreateGradient(settings)
+function Core:setGradient(settings)
     local Gradient = Instance.new("UIGradient")
     setParentHandler(Gradient, "Name", settings.Name)
     setParentHandler(Gradient, "Parent", settings.Parent)
@@ -211,4 +211,5 @@ function Core:CreateGradient(settings)
 end
 
 return Core
+
 
