@@ -18,6 +18,7 @@ function Core:setScreenGui(settings)
     setParentHandler(ScreenGui, "ZIndexBehavior", settings.ZIndex)
     setParentHandler(ScreenGui, "ResetOnSpawn", settings.ResetOnSpawn)
     setParentHandler(ScreenGui, "IgnoreGuiInset", settings.IgnoreGuiInset)
+    return ScreenGui
 end
 
 function Core:setFrame(settings)
@@ -31,6 +32,7 @@ function Core:setFrame(settings)
     setParentHandler(Frame, "Parent", settings.Parent)
     setParentHandler(Frame, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(Frame, "Visible", settings.Visible)
+    return Frame
 end
 
 function Core:setTextButton(settings)
@@ -49,6 +51,7 @@ function Core:setTextButton(settings)
     if settings.Callback then
         TextButton.MouseButton1Click:Connect(settings.Callback)
     end
+    return TextButton
 end
 
 function Core:setTextLabel(settings)
@@ -64,6 +67,7 @@ function Core:setTextLabel(settings)
     setParentHandler(TextLabel, "FontSize", settings.FontSize)
     setParentHandler(TextLabel, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(TextLabel, "Visible", settings.Visible)
+    return TextLabel
 end
 
 function Core:setImageLabel(settings)
@@ -77,6 +81,7 @@ function Core:setImageLabel(settings)
     setParentHandler(ImageLabel, "ScaleType", settings.ScaleType)
     setParentHandler(ImageLabel, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(ImageLabel, "Visible", settings.Visible)
+    return ImageLabel
 end
 
 function Core:setImageButton(settings)
@@ -93,6 +98,7 @@ function Core:setImageButton(settings)
     if settings.Callback then
         ImageButton.MouseButton1Click:Connect(settings.Callback)
     end
+    return ImageButton
 end
 
 function Core:setScrollingFrame(settings)
@@ -107,6 +113,7 @@ function Core:setScrollingFrame(settings)
     setParentHandler(ScrollingFrame, "ScrollBarThickness", settings.ScrollBarThickness)
     setParentHandler(ScrollingFrame, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(ScrollingFrame, "Visible", settings.Visible)
+    return ScrollingFrame
 end
 
 function Core:setTextBox(settings)
@@ -124,12 +131,14 @@ function Core:setTextBox(settings)
     setParentHandler(TextBox, "ClearTextOnFocus", settings.ClearTextOnFocus)
     setParentHandler(TextBox, "AnchorPoint", settings.AnchorPoint)
     setParentHandler(TextBox, "Visible", settings.Visible)
+    return TextBox
 end
 
 function Core:setCornerRadius(settings)
     local Corner = Instance.new("UICorner")
     setParentHandler(Corner, "CornerRadius", settings.CornerRadius)
     setParentHandler(Corner, "Parent", settings.Parent)
+    return Corner
 end
 
 function Core:setStroke(settings)
@@ -137,6 +146,7 @@ function Core:setStroke(settings)
     setParentHandler(Stroke, "Color", settings.Color)
     setParentHandler(Stroke, "Thickness", settings.Thickness)
     setParentHandler(Stroke, "Parent", settings.Parent)
+    return Stroke
 end
 
 function Core:setGridLayout(settings)
@@ -146,6 +156,7 @@ function Core:setGridLayout(settings)
     setParentHandler(GridLayout, "Parent", settings.Parent)
     setParentHandler(GridLayout, "FillDirectionMaxCells", settings.FillDirectionMaxCells)
     setParentHandler(GridLayout, "StartCorner", settings.StartCorner)
+    return GridLayout
 end
 
 function Core:setListLayout(settings)
@@ -155,6 +166,7 @@ function Core:setListLayout(settings)
     setParentHandler(ListLayout, "VerticalAlignment", settings.VerticalAlignment)
     setParentHandler(ListLayout, "HorizontalAlignment", settings.HorizontalAlignment)
     setParentHandler(ListLayout, "SortOrder", settings.SortOrder)
+    return ListLayout
 end
 
 return Core
