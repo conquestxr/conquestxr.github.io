@@ -207,9 +207,11 @@ function Core:setGradient(settings)
     setParentHandler(Gradient, "Parent", settings.Parent)
     setParentHandler(Gradient, "Color", settings.Color)
     setParentHandler(Gradient, "Rotation", settings.Rotation)
+    setParentHandler(Gradient, "Enabled", settings.Enabled)
     return Gradient
 end
 
 return Core
+
 
 
