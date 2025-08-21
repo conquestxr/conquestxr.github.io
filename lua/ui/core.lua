@@ -2,6 +2,7 @@
 -- This script is not intended to be modify,
 -- Only took inspiration or idea on it.
 -- Created by ConquestX
+-- Testing project
 
 local Core = {}
 
@@ -228,3 +229,4 @@ function Core:setGradient(settings)
 end
 
 return Core
+
